@@ -1,0 +1,270 @@
+/* Tamaño y alineación del logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio entre la imagen y el texto "PES" */
+}
+
+.img-logo {
+    height: 40px; /* Ajusta este valor DE 30px, 40px, 50px según el tamaño que prefieras */
+    width: auto;  /* Mantiene la proporción de la imagen sin deformarla */
+    object-fit: contain;
+}
+/* PALETA DE COLORES Y ESTILOS BASE */
+:root {
+    --verde-cesped: #2e8b57;       /* Verde césped principal */
+    --negro-deportivo: #111827;    /* Negro deportivo para fondos/texto */
+    --amarillo-cta: #facc15;       /* Amarillo para botones de acción */
+    --amarillo-hover: #eab308;     /* Amarillo más oscuro al pasar el mouse */
+    --blanco: #ffffff;             /* Fondo neutro / texto contraste */
+    --gris-claro: #f3f4f6;         /* Fondo secundario claro */
+    
+    --ff-titulos: 'Montserrat', sans-serif;
+    --ff-texto: 'Open Sans', sans-serif;
+}
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--ff-texto);
+            color: var(--negro-deportivo);
+            background-color: var(--blanco);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, .logo {
+            font-family: var(--ff-titulos);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* BOTONES DE ACCIÓN DE AMARILLOS */
+        .btn-cta {
+            display: inline-block;
+            background-color: var(--amarillo-cta);
+            color: var(--negro-deportivo);
+            font-family: var(--ff-titulos);
+            font-weight: 800;
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(250, 204, 21, 0.4);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn-cta:hover {
+            background-color: var(--amarillo-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(250, 204, 21, 0.6);
+        }
+
+        /* 1. HEADER  */
+        .header {
+            background-color: var(--negro-deportivo);
+            border-bottom: 3px solid var(--verde-cesped);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--verde-cesped);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: var(--blanco);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--amarillo-cta);
+        }
+
+        /* 2. HERO SECTION */
+        .hero {
+            background-color: var(--verde-cesped);
+            color: var(--blanco);
+            text-align: center;
+            padding: 90px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 35px;
+            font-weight: 600;
+        }
+
+        /* 3. BENEFICIOS */
+        .beneficios {
+            padding: 80px 0;
+            background-color: var(--blanco);
+        }
+
+        .grid-beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .card-beneficio {
+            padding: 30px;
+            border-radius: 12px;
+            background-color: var(--gris-claro);
+            border: 2px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .card-beneficio:hover {
+            border-color: var(--verde-cesped);
+        }
+
+        .icono {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .card-beneficio h3 {
+            font-size: 1.4rem;
+            color: var(--negro-deportivo);
+        }
+
+        /* 4. CÓMO FUNCIONA */
+        .como-funciona {
+            background-color: var(--gris-claro);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .como-funciona h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+            color: var(--negro-deportivo);
+        }
+
+        .pasos-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .paso {
+            background-color: var(--blanco);
+            padding: 25px 35px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-family: var(--ff-titulos);
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--negro-deportivo);
+        }
+
+        .flecha {
+            font-size: 1.8rem;
+            color: var(--verde-cesped);
+            font-weight: bold;
+        }
+
+        /* 5. CTA FINAL */
+        .cta-final {
+            background-color: var(--negro-deportivo);
+            color: var(--blanco);
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 4px solid var(--amarillo-cta);
+        }
+
+        .cta-final h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+            color: var(--blanco);
+        }
+
+        /* 6. FOOTER */
+        .footer {
+            background-color: #090d16;
+            color: var(--blanco);
+            padding: 25px 0;
+            text-align: center;
+            font-size: 0.95rem;
+            border-top: 1px solid #1f2937;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .footer-content a {
+            color: var(--blanco);
+            text-decoration: none;
+        }
+
+        .footer-content a:hover {
+            color: var(--amarillo-cta);
+        }
+
+        /* ADAPTABILIDAD MÓVIL */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1.1rem; }
+            
+            .pasos-container {
+                flex-direction: column;
+            }
+            
+            .flecha {
+                transform: rotate(90deg);
+                margin: 5px 0;
+            }
+        }
